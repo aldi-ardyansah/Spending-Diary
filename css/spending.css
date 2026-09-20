@@ -1,0 +1,379 @@
+:root {
+	--indigo: #653795;
+	--indigo-hover: #5a2f7c;
+	--page-background: #f8f9fa;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	min-height: 100vh;
+	background-color: var(--page-background);
+	color: var(--bs-body-color);
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html[data-bs-theme="dark"] {
+	--page-background: #151515;
+	--card-background: #1e1e1e;
+	--card-border: #3a3a3a;
+}
+
+html[data-bs-theme="dark"] body {
+	background-color: var(--page-background);
+}
+
+html[data-bs-theme="dark"] .card,
+html[data-bs-theme="dark"] .modal-content {
+	background-color: var(--card-background);
+	border-color: var(--card-border);
+}
+
+html[data-bs-theme="dark"] .bg-light {
+	background-color: #242424 !important;
+	color: var(--bs-body-color);
+}
+
+html[data-bs-theme="dark"] .table {
+	--bs-table-bg: transparent;
+	--bs-table-color: var(--bs-body-color);
+	--bs-table-hover-bg: rgba(255, 255, 255, 0.04);
+	--bs-table-hover-color: var(--bs-body-color);
+}
+
+html[data-bs-theme="dark"] .table > :not(caption) > * > * {
+	border-color: var(--card-border);
+}
+
+html[data-bs-theme="dark"] .form-control,
+html[data-bs-theme="dark"] .form-select {
+	background-color: #242424;
+	border-color: #3a3a3a;
+	color: #f2f2f2;
+}
+
+html[data-bs-theme="dark"] .form-control::placeholder {
+	color: #858585;
+}
+
+html[data-bs-theme="dark"] .form-control:focus,
+html[data-bs-theme="dark"] .form-select:focus {
+	background-color: #282828;
+	border-color: #8b5bb7;
+	color: #fff;
+	box-shadow: 0 0 0 0.25rem rgba(101, 55, 149, 0.25);
+}
+
+html[data-bs-theme="dark"] .btn-close {
+	filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+html[data-bs-theme="dark"] .text-secondary {
+	color: #afafaf !important;
+}
+
+html[data-bs-theme="dark"] .text-dark {
+	color: #f2f2f2 !important;
+}
+
+html[data-bs-theme="dark"] .page-title,
+html[data-bs-theme="dark"] .summary-title,
+html[data-bs-theme="dark"] .text-indigo,
+html[data-bs-theme="dark"] .modal-title {
+	color: #b98be8;
+}
+
+.navbar {
+	background-color: var(--indigo);
+	padding: 0.625rem 0;
+}
+
+.navbar .container {
+	min-height: 2.75rem;
+}
+
+.navbar-brand {
+	min-height: 2.75rem;
+	padding: 0;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+	color: #fff;
+}
+
+.navbar-logo {
+	width: 2rem;
+	height: 2rem;
+	flex-shrink: 0;
+}
+
+.navbar .navbar-nav {
+	align-items: center;
+	gap: 0.25rem;
+}
+
+.navbar .nav-link {
+	display: inline-flex;
+	align-items: center;
+	min-height: 2.375rem;
+	padding: 0.5rem 0.75rem;
+	color: #fff;
+	font-size: 0.9375rem;
+	line-height: 1.25;
+	border-radius: 0.5rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.08);
+}
+
+.navbar .nav-link.active {
+	color: #fff;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0.12);
+}
+
+.navbar .account-actions {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+}
+
+.theme-toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.375rem;
+	height: 2.375rem;
+	min-width: 2.375rem;
+	padding: 0 !important;
+	border-radius: 0.5rem;
+	line-height: 1;
+}
+
+.theme-toggle:hover {
+	background-color: rgba(255, 255, 255, 0.12);
+	border-color: rgba(255, 255, 255, 0.75);
+}
+
+.theme-toggle span {
+	font-size: 1.05rem;
+	line-height: 1;
+}
+
+.navbar .logout-button {
+	min-height: 2.375rem;
+	padding: 0.5rem 0.875rem;
+	border-radius: 0.5rem;
+	font-size: 0.9375rem;
+	line-height: 1.25;
+}
+
+.navbar .logout-form {
+	margin: 0;
+}
+
+.navbar-toggler {
+	border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler:focus {
+	box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.15);
+}
+
+.navbar-toggler-icon {
+	filter: brightness(0) invert(1);
+}
+
+.page-title,
+.text-indigo {
+	color: var(--indigo);
+}
+
+.spending-card {
+	border: 0;
+	border-radius: 1rem;
+	box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.summary-card {
+	border: 0;
+	border-radius: 0.75rem;
+}
+
+.summary-title {
+	color: var(--indigo);
+	font-size: 0.95rem;
+	font-weight: 600;
+}
+
+.stat-value {
+	font-size: 1.35rem;
+	font-weight: 600;
+}
+
+.btn {
+	padding: 0.65rem 1rem;
+	border-radius: 0.5rem;
+}
+
+.btn-indigo {
+	background-color: var(--indigo);
+	border-color: var(--indigo);
+	color: #fff;
+}
+
+.btn-indigo:hover,
+.btn-indigo:focus {
+	background-color: var(--indigo-hover);
+	border-color: var(--indigo-hover);
+	color: #fff;
+}
+
+.form-control,
+.form-select {
+	padding: 0.65rem 1rem;
+	border-radius: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+	border-color: var(--indigo);
+	box-shadow: 0 0 0 0.25rem rgba(101, 55, 149, 0.15);
+}
+
+.table th {
+	white-space: nowrap;
+}
+
+.table td {
+	vertical-align: middle;
+}
+
+.table .amount,
+.table .action-column {
+	white-space: nowrap;
+}
+
+.notes-cell {
+	min-width: 180px;
+	max-width: 300px;
+	white-space: normal;
+	word-break: break-word;
+}
+
+.alert {
+	border-radius: 0.5rem;
+}
+
+.modal-content {
+	border-radius: 0.75rem;
+}
+
+#AddSpending .modal-dialog,
+#EditSpending .modal-dialog {
+	height: calc(100% - 1rem);
+	margin: 0.5rem auto;
+}
+
+#AddSpending .modal-content,
+#EditSpending .modal-content {
+	height: 100%;
+	overflow: hidden;
+}
+
+#AddSpending form,
+#EditSpending form {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 0;
+}
+
+#AddSpending .modal-header,
+#AddSpending .modal-footer,
+#EditSpending .modal-header,
+#EditSpending .modal-footer {
+	flex-shrink: 0;
+}
+
+#AddSpending .modal-body,
+#EditSpending .modal-body {
+	flex: 1 1 auto;
+	min-height: 0;
+	overflow-y: auto !important;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 991.98px) {
+	.navbar .navbar-collapse {
+		padding-top: 1rem;
+	}
+
+	.navbar .navbar-nav {
+		align-items: stretch;
+		gap: 0.25rem;
+	}
+
+	.navbar .nav-item,
+	.navbar .nav-link {
+		width: 100%;
+	}
+
+	.navbar .account-actions-item {
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		margin-top: 0.25rem;
+	}
+
+	.navbar .account-actions {
+		justify-content: flex-end;
+		width: auto;
+	}
+
+	.navbar .logout-form {
+		margin: 0;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.spending-card .card-body,
+	.summary-card .card-body {
+		padding: 1.25rem !important;
+	}
+
+	.table {
+		font-size: 0.9rem;
+	}
+
+	.table td,
+	.table th {
+		white-space: nowrap;
+	}
+
+	.notes-cell {
+		white-space: normal;
+	}
+
+	#AddSpending .modal-dialog,
+	#EditSpending .modal-dialog {
+		height: calc(100% - 1rem);
+		margin: 0.5rem;
+	}
+
+	#AddSpending .modal-content,
+	#EditSpending .modal-content {
+		height: 100%;
+	}
+}
