@@ -66,15 +66,31 @@
 								<p class="text-secondary mb-0">Manage your account information.</p>
 							</div>
 
-							<?php if ($Account_Success === "Data"): ?>
-								<div class="alert alert-success mb-4" role="alert">Account updated successfully!</div>
-							<?php endif; ?>
-							<?php if ($Account_Failed === "Data"): ?>
-								<div class="alert alert-danger mb-4" role="alert">Failed to update account!</div>
+							<?php if ($Account_Success): ?>
+								<div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+									Account updated successfully!
+									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
+							<?php elseif ($Account_Failed === "Data"): ?>
+								<div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+									Failed to update account!
+									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
 							<?php elseif ($Account_Failed === "Password"): ?>
-								<div class="alert alert-danger mb-4" role="alert">Wrong current password!</div>
+								<div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+									Wrong current password!
+									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
+							<?php elseif ($Account_Failed === "Password_Confirmation"): ?>
+								<div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+									New password does not match!
+									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
 							<?php elseif ($Account_Failed === "Username"): ?>
-								<div class="alert alert-danger mb-4" role="alert">Username already exists!</div>
+								<div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+									Username already exists!
+									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
 							<?php endif; ?>
 
 							<form action="account_action.php" method="post">

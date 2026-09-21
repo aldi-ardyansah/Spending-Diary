@@ -33,7 +33,7 @@
         </header>
         <?php if ($registerSuccess): ?>
             <div class="alert alert-success mb-4" role="alert">Account registered successfully!</div>
-        <?php elseif (isset($alerts[$loginFailed])): ?>
+        <?php elseif ($loginFailed !== null && isset($alerts[$loginFailed])): ?>
             <div class="alert alert-danger mb-4" role="alert"><?= htmlspecialchars($alerts[$loginFailed]) ?></div>
         <?php endif; ?>
         <form action="index_login.php" method="post">
