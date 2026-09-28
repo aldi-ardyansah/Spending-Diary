@@ -8,7 +8,7 @@
     $host = "localhost";
     $username = "root";
     $password = "";
-    $database = "spending-diary";
+    $database = "spending_diary";
 
     $sql_connection = mysqli_connect(
         $host,
